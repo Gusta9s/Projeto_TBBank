@@ -1,7 +1,10 @@
 package br.com.gpacheco;
 
 public class Conta {                                  // Criando o objeto Conta...
-	double saldo;                                          // Declarando o atributo saldo.
+	private double saldo;                                          // Declarando o atributo saldo, em private para ocular o saldo para usuario não autorizado.
+	private int agencia;
+	private int numero;
+	private Cliente titular;                                            // Direcionando as contas, para o Objeto Cliente.
 	
 	public boolean deposita(double valor) {                       // Passando o parametro "valor" do tipo Double para identificar o tipo de parametro para classe principal, o booleano é para dar o retorno de sucesso ou falha!. 
 		if(this.saldo >= valor) {                       // Condição para ser efetuado o deposito.
@@ -34,5 +37,30 @@ public class Conta {                                  // Criando o objeto Conta.
 		else {
 			return false;
 		}
+	}
+	
+	public double getSaldo() {                    // Passa o saldo do usuario!.
+		return this.saldo;
+	}
+	
+	public void setSaldo(double valor) {             // Recebe o saldo do usuario, para conta titular.
+		this.saldo = valor;
+	}
+	
+	public void setTitular1(Cliente gabriel) {           // *** Recebe os dados do 1° titular de forma separada, o parametro é o proprio cliente e, seu comportamento é de incluir em conta.titular os dados da referencia gabriel com seus setters. ***
+		this.titular = gabriel;
+	}
+	
+	public void setTitular2(Cliente maria) {              // || //
+		this.titular = maria;
+	}
+	
+	public void setTitular3(Cliente rodrigo) {            // || //
+		this.titular = rodrigo;
+		
+	}
+	
+	public Cliente getTitular() {                                // Passa as informações do titular de forma separada.
+		return this.titular;
 	}
 }
