@@ -5,6 +5,15 @@ public class Conta {                                  // Criando o objeto Conta.
 	private int agencia;
 	private int numero;
 	private Cliente titular;                                            // Direcionando as contas, para o Objeto Cliente.
+	private static int total;                                   // Static é passado como um atributo compartilhado dentro do construtor/objeto Conta. (Onde vai ser contado a cada criação de um objeto, um novo +1.)
+	
+	public Conta(int agencia, int numero) {               // Metodo de construção inicializado.
+		this.agencia = agencia;                                 // Agora é obrigatorio a passagem de agencia e conta (nos parametros de criação), para se criar um novo objeto com informações nescessarias.
+		this.numero = numero;
+		System.out.println("Criado a agencia: " + agencia + ", e criado o numero de conta: " + numero + "\n");
+		Conta.total++;                                                                                           // Conta.total soma a quantidade de contas criadas em uma classe.
+		System.out.println("O numero total de contas criadas e: " + Conta.total + "\n");
+	}
 	
 	public boolean deposita(double valor) {                       // Passando o parametro "valor" do tipo Double para identificar o tipo de parametro para classe principal, o booleano é para dar o retorno de sucesso ou falha!. 
 		if(this.saldo >= valor) {                       // Condição para ser efetuado o deposito.
@@ -62,5 +71,9 @@ public class Conta {                                  // Criando o objeto Conta.
 	
 	public Cliente getTitular() {                                // Passa as informações do titular de forma separada.
 		return this.titular;
+	}
+	
+	public static int getTotal() {                         // getTotal() faz com que as outras classes recebam o numero total de contas.
+		return Conta.total;
 	}
 }

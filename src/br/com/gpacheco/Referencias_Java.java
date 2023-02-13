@@ -3,9 +3,9 @@ package br.com.gpacheco;
 public class Referencias_Java {
 	public static void main(String args[]) {
 		
-		Conta primeiraConta = new Conta();                  // Instanciando uma nova referencia.
-		Conta segundaConta = new Conta();
-		Conta contaDoGabriel = new Conta();
+		Conta primeiraConta = new Conta(5555, 22222);                  // Instanciando uma nova referencia.
+		Conta segundaConta = new Conta(4444, 11111);                      // Agora estas contas obrigatoriamente prescisam passar agencia e conta...
+		Conta contaDoGabriel = new Conta(2981,53415);
 		
 		primeiraConta.setSaldo(400);
 		segundaConta.setSaldo(300);                                         // Utilizando set para atribuir valores!.

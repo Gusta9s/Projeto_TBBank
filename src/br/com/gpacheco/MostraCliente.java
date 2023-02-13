@@ -20,9 +20,11 @@ public class MostraCliente {
 		rodrigo.setCpf("189.188.785-93");
 		rodrigo.setProfissao("Cozinheiro");
 		
-		Conta contaDoGabriel = new Conta();                               // Instanciando no Objeto Conta, as contas de cada usuario...
-		Conta contaDaMaria = new Conta();
-		Conta contaDoRodrigo = new Conta();
+		Conta contaDoGabriel = new Conta(2981,53415);                               // Instanciando no Objeto Conta, as contas de cada usuario...
+		Conta contaDaMaria = new Conta(9095, 16232);                                   // Agora se tornou obrigatorio, a passagem de parametros conforme foi solicitado no construtor!.
+		Conta contaDoRodrigo = new Conta(4671, 83438);
+		
+		System.out.println(Conta.getTotal());                                // Passando o total de contas, atraves do metodo getTotal()...
 		
 		contaDoGabriel.setTitular1(gabriel);                                        // Fazendo a composição das contas, direcionando-os para o Objeto Cliente para receber suas determinadas atribuições em cima dos setters. EX: = setTitular1 vai receber os dados de gabriel.
 		contaDaMaria.setTitular2(maria);
