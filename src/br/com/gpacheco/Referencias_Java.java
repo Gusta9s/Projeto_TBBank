@@ -1,4 +1,9 @@
 package br.com.gpacheco;
+/**
+ * 
+ * @author Gustavo de Almeida Pacheco
+ *
+ */
 
 public class Referencias_Java {
 	public static void main(String args[]) {
@@ -11,7 +16,7 @@ public class Referencias_Java {
 		segundaConta.setSaldo(300);                                         // Utilizando set para atribuir valores!.
 		contaDoGabriel.setSaldo(3200);
 		
-		boolean valorParaDeposito = primeiraConta.deposita(50);        // Operando o deposito e criando uma condição booleana.
+		boolean valorParaDeposito = primeiraConta.deposita(40);        // Operando o deposito e criando uma condição booleana.
 		if(valorParaDeposito) {                                                              // Por ser um valor booleano, ele vai permitir fazer a estrutura condicional.  
 			System.out.println("Deposito realizado com sucesso!.");
 			System.out.println(primeiraConta.getSaldo());
